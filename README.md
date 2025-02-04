@@ -124,7 +124,7 @@ The system was tested under various scenarios, including sharp turns, intersecti
 This research demonstrates a robust approach to autonomous aircraft taxiing by integrating advanced control strategies with sensor fusion techniques. The comparative study of controllers provides insights into their strengths and limitations, guiding future improvements in autonomous ground navigation systems.
 
 For more details, refer to the [Project Repository](https://anujithm.github.io/Autonomous-Taxiing-of-Aircraft.github.io/).
-"""
+
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
