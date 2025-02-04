@@ -1,4 +1,4 @@
-# **Autonomous Taxiing of Aircraft: Controller Comparison and Sensor Fusion Approach**
+# **Autonomous Taxiing of Aircraft: Controller Comparison and Sensor Fusion in Detail**
 
 ### **[Project Repository](https://anujithm.github.io/Autonomous-Taxiing-of-Aircraft.github.io/)**
 
