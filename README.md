@@ -8,7 +8,6 @@
 
 This research focuses on developing an autonomous taxiing system for aircraft, aiming to enhance safety, efficiency, and precision in ground operations. The primary contributions lie in the implementation of advanced control strategies for smooth navigation and robust sensor fusion techniques to ensure reliable obstacle detection and avoidance.
 
-The core of this system is built around real-time controller comparisons and sensor fusion algorithms, enabling the aircraft to autonomously follow taxiing paths while dynamically adapting to environmental changes.
 
 ---
 
