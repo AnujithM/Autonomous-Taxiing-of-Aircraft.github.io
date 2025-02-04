@@ -7,7 +7,7 @@
 ## **1. Introduction**
 
 This research focuses on developing an autonomous taxiing system for aircraft, aiming to enhance safety, efficiency, and precision in ground operations. 
-The project includes the implementation of advanced control strategies for smooth navigation and the integration of robust sensor fusion techniques to ensure reliable obstacle detection and avoidance, which will be discussed in detail below.
+The project includes the implementation of control strategies for smooth navigation and the integration of robust sensor fusion techniques to ensure reliable obstacle detection and avoidance, which will be discussed in detail below.
 
 
 ---
