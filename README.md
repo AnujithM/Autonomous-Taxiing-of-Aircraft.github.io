@@ -1,45 +1,131 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# **Autonomous Taxiing of Aircraft: Controller Comparison and Sensor Fusion Approach**
 
+### **[Project Repository](https://anujithm.github.io/Autonomous-Taxiing-of-Aircraft.github.io/)**
 
-Example project pages built using this template are:
-- https://vision.huji.ac.il/spectral_detuning/
-- https://vision.huji.ac.il/podd/
-- https://dreamix-video-editing.github.io
-- https://vision.huji.ac.il/conffusion/
-- https://vision.huji.ac.il/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad/
-- https://vision.huji.ac.il/deepsim/
+---
 
+## **1. Introduction**
 
+This research focuses on developing an autonomous taxiing system for aircraft, aiming to enhance safety, efficiency, and precision in ground operations. The primary contributions lie in the implementation of advanced control strategies for smooth navigation and robust sensor fusion techniques to ensure reliable obstacle detection and avoidance.
 
-## Start using the template
-To start using the template click on `Use this Template`.
+The core of this system is built around real-time controller comparisons and sensor fusion algorithms, enabling the aircraft to autonomously follow taxiing paths while dynamically adapting to environmental changes.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+---
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+## **2. Key Contributions**
 
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
+1. **Controller Comparison:**
+   - Implementation and evaluation of multiple controllers:
+     - **Proportional-Derivative (PD) Controller**
+     - **Sliding Mode Control (SMC)**
+     - **Linear Quadratic Regulator (LQR)**
+     - **Stanley Controller**
+   - Comprehensive analysis of controller performance under varying conditions, including sharp turns, intersections, and obstacle-laden environments.
 
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://pages.cs.huji.ac.il/eliahu-horwitz/](https://pages.cs.huji.ac.il/eliahu-horwitz/)
+2. **Sensor Fusion:**
+   - Integration of ultrasonic sensor data with an object detection model to enhance obstacle detection accuracy.
+   - The fusion technique allows for redundancy in obstacle recognition, ensuring higher reliability even in challenging scenarios.
+
+3. **Real-Time State Management:**
+   - Development of automatic and manual switching mechanisms between control modes for flexible operation during different taxiing scenarios.
+
+---
+
+## **3. System Architecture**
+
+The system comprises three key modules:
+- **Control Module:** Handles the dynamic adjustment of aircraft steering and speed based on real-time sensor inputs.
+- **Sensor Fusion Module:** Merges data from ultrasonic sensors and vision-based object detection to improve the accuracy of obstacle detection.
+- **State Management Module:** Manages transitions between manual, automatic, and emergency stop states.
+
+---
+
+## **4. Flowchart of the Algorithm**
+
+### **Flowchart**
+
+\`\`\`mermaid
+flowchart TD
+    A[Start] --> B{Read current state}
+    B --> |State = 0 (Manual)| C[Manual Control Mode]
+    B --> |State = 1 (Automatic)| D[Automatic Control Mode]
+    B --> |State = 2 (Stop)| E[Emergency Stop Mode]
+    C --> F{Read user control input}
+    F --> G[Publish velocity commands]
+    G --> B
+    D --> H{Read lane detection and object data}
+    H --> |Data = None| I[Stop vehicle and switch to Manual Mode]
+    H --> |Object detected| J{Check ultrasonic distance}
+    J --> |Distance < 25 cm| I
+    J --> |Distance ≥ 25 cm| K[Continue Automatic Mode]
+    H --> |Lane data valid| L{Controller Selection}
+    L --> |PD Controller| M[Apply PD control law]
+    L --> |SMC| N[Apply SMC control law]
+    L --> |LQR| O[Apply LQR control law]
+    L --> |Stanley| P[Apply Stanley control law]
+    M --> Q[Publish velocity commands]
+    N --> Q
+    O --> Q
+    P --> Q
+    Q --> B
+    E --> R[Set velocity to zero]
+    R --> B
+\`\`\`
+
+---
+
+## **5. Controller Comparison**
+
+### **5.1 Proportional-Derivative (PD) Controller**
+- Simple yet effective controller for basic lane following tasks.
+- Provides quick responsiveness to changes in trajectory.
+
+### **5.2 Sliding Mode Control (SMC)**
+- Robust against external disturbances and model uncertainties.
+- Ensures stable control even under dynamic environmental changes.
+
+### **5.3 Linear Quadratic Regulator (LQR)**
+- Optimal control strategy minimizing a cost function that balances control effort and system error.
+- Effective in achieving smooth trajectory tracking with minimal control effort.
+
+### **5.4 Stanley Controller**
+- Primarily designed for path tracking in autonomous vehicles.
+- Integrates both cross-track error and heading error to generate steering commands.
+
+**Performance Metrics:**
+- Tracking accuracy
+- Response time
+- Stability under varying conditions
+
+---
+
+## **6. Sensor Fusion Approach**
+
+The fusion of ultrasonic sensor data with the object detection model enhances the reliability of obstacle detection. The ultrasonic sensor acts as a fail-safe mechanism when visual data is unreliable, such as in low-light conditions or due to occlusions.
+
+### **Sensor Fusion Workflow:**
+1. Object detection model identifies potential obstacles.
+2. Ultrasonic sensor measures distance to detected objects.
+3. If the distance is less than a safety threshold (25 cm), the system triggers an emergency stop.
+
+---
+
+## **7. Experimental Results**
+
+The system was tested under various scenarios, including sharp turns, intersections, and obstacle-dense environments. Key findings include:
+- **Stanley Controller** performed exceptionally well in sharp turns.
+- **LQR Controller** provided smoother trajectories with less oscillation.
+- **PD Controller** offered quick responsiveness but struggled with stability at high speeds.
+- **SMC** showed robustness against disturbances but required fine-tuning for optimal performance.
+
+---
+
+## **8. Conclusion**
+
+This research demonstrates a robust approach to autonomous aircraft taxiing by integrating advanced control strategies with sensor fusion techniques. The comparative study of controllers provides insights into their strengths and limitations, guiding future improvements in autonomous ground navigation systems.
+
+For more details, refer to the [Project Repository](https://anujithm.github.io/Autonomous-Taxiing-of-Aircraft.github.io/).
+"""
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
