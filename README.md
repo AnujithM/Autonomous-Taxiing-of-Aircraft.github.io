@@ -4,6 +4,8 @@
 #### Indian Institute of Science, Bengaluru  
 #### *AVIATION Journal Vol 27 No 4 (2023)*
 
+## **Model checkpoint**
+Please copy the [resources](https://drive.google.com/drive/folders/18T3t87dYajVvqO8WMyi9NXHBhyZbazkO?usp=drive_link) folder inside the Deployment Scripts folder in the repository.
 
 ## **🎥 Video Demonstration**
 
