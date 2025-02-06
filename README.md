@@ -49,6 +49,8 @@ For a video demonstration of the project, visit the webpage [here](https://anuji
 
 
 ## **BibTeX Citation**
+If you find our work useful, please consider citing us!
+
 ```bibtex
 @article{Gaikwad2023,
     title={Developing a computer vision based system for autonomous taxiing of aircraft},
