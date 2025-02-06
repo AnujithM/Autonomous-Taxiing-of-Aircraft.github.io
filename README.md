@@ -4,6 +4,42 @@
 #### Indian Institute of Science, Bengaluru  
 #### *AVIATION Journal Vol 27 No 4 (2023)*
 
+## **Implementation**
+
+For running the project, one system is used to run ROS to control the robot based on the control signal received, which is the result from the lane and object detection model on an external GPU.  
+
+
+### **Initialization**
+Connect to the robot via SSH and run the following commands:
+```sh
+rosrun tankbot_scripts differential_tank.py
+rosrun lightDetection tst_server.py
+```
+
+### **On the GPU:**
+Run the following script inside the `Deployment scripts` folder:
+```sh
+python wheel_control_generation.py
+```
+
+### **Joystick Key Inputs Detection**
+After the above steps, in the ROS system, run:
+```sh
+rosrun lightDetection turtlebot3_pointop_key
+```
+
+### **On the GPU:**
+Run:
+```sh
+python fusedControl_v1.py
+```
+
+### **Final Step in ROS:**
+```sh
+rosrun lightDetection autoUI.py
+```
+
+
 ## **Model checkpoint**
 Please copy the [resources](https://drive.google.com/drive/folders/18T3t87dYajVvqO8WMyi9NXHBhyZbazkO?usp=drive_link) folder inside the Deployment Scripts folder in the repository.
 
