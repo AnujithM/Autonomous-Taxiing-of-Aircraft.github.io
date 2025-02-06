@@ -1,7 +1,6 @@
 # **COMPUTER VISION BASED SYSTEM FOR AUTONOMOUS TAXIING OF AIRCRAFT**
 
 ### [Prashant Gaikwat](#), [Abhishek Mukhopadhyay](#), [Anujith Muraleedharan](#), [Mukund Mitra](#), [Pradipta Biswas](#)
-
 #### Indian Institute of Science, Bengaluru  
 #### *AVIATION Journal Vol 27 No 4 (2023)*
 
