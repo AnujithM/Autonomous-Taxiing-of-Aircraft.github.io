@@ -1,13 +1,10 @@
-# Autonomous Taxiing of Aircraft
+🚀 Autonomous Taxiing of Aircraft
 
-## Authors
+**AVIATION Journal Vol 27 No 4 (2023)**
+
 Prashant Gaikwat, Abhishek Mukhopadhyay, Anujith Muraleedharan, Mukund Mitra, Pradipta Biswas
 
-## Institution
-Indian Institute of Science, Bangalore
-
-## Journal
-**AVIATION Journal** - Vol 27, No 4 (2023)
+*denotes equal contribution, Indian Institute of Science, Bangalore
 
 ## **🎥 Video Demonstration**
 
