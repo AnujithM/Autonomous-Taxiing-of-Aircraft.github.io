@@ -4,7 +4,7 @@
 
 Prashant Gaikwat, Abhishek Mukhopadhyay, Anujith Muraleedharan, Mukund Mitra, Pradipta Biswas
 
-*denotes equal contribution, Indian Institute of Science, Bangalore
+Indian Institute of Science, Bangalore
 
 ## **🎥 Video Demonstration**
 
