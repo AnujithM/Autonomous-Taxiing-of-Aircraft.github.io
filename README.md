@@ -47,6 +47,23 @@ Please copy the [resources](https://drive.google.com/drive/folders/18T3t87dYajVv
 
 For a video demonstration of the project, visit the webpage [here](https://anujithm.github.io/Autonomous-Taxiing-of-Aircraft.github.io/).
 
+
+## **BibTeX Citation**
+```bibtex
+@article{Gaikwad2023,
+    title={Developing a computer vision based system for autonomous taxiing of aircraft},
+    author={Gaikwad, P. and Mukhopadhyay, A. and Muraleedharan, A. and Mitra, M. and Biswas, P.},
+    journal={Aviation},
+    volume={27},
+    number={4},
+    pages={248--258},
+    year={2023},
+    month={Dec},
+    doi={10.3846/aviation.2023.20588}
+}
+```
+
+
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
 
