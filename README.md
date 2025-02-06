@@ -41,7 +41,7 @@ rosrun lightDetection autoUI.py
 
 
 ## **Model checkpoint**
-Please copy the [resources](https://drive.google.com/drive/folders/18T3t87dYajVvqO8WMyi9NXHBhyZbazkO?usp=drive_link) folder inside the Deployment Scripts folder in the repository.
+Please copy the [resources](https://drive.google.com/drive/folders/18T3t87dYajVvqO8WMyi9NXHBhyZbazkO?usp=drive_link) folder to the Deployment Scripts folder in the repository.
 
 ## **🎥 Video Demonstration**
 
