@@ -1,5 +1,5 @@
 # **COMPUTER VISION BASED SYSTEM FOR AUTONOMOUS TAXIING OF AIRCRAFT**
-
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python) ![ROS](https://img.shields.io/badge/ROS-Noetic-%230A66C2.svg?&style=flat-square&logo=ros&logoColor=white) ![OpenCV](https://img.shields.io/badge/OpenCV-4.x-red?style=flat-square&logo=opencv) ![GPU Accelerated](https://img.shields.io/badge/GPU%20Acceleration-Enabled-green?style=flat-square) ![Autonomous Vehicles](https://img.shields.io/badge/Autonomous%20Taxiing-Aircraft-orange?style=flat-square) ![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=flat-square)
 ### [Prashant Gaikwat](#), [Abhishek Mukhopadhyay](#), [Anujith Muraleedharan](#), [Mukund Mitra](#), [Pradipta Biswas](#)
 #### Indian Institute of Science, Bengaluru  
 #### *AVIATION Journal Vol 27 No 4 (2023)*
